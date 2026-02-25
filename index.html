@@ -12,6 +12,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
+    <style>
+      .testimonials-rail {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        overflow: visible !important;
+      }
+      .testimonials-rail-wrapper {
+        overflow: visible !important;
+      }
+      .testimonials-section {
+        overflow: visible !important;
+      }
+      .testimonial-card {
+        flex: unset !important;
+        min-width: unset !important;
+        max-width: unset !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
+      }
+      .testimonial-text {
+        flex: 1 !important;
+      }
+      @media (max-width: 768px) {
+        .testimonials-rail {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
