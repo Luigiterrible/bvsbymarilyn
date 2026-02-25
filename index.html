@@ -833,68 +833,66 @@
                     Agenda tu consulta inicial hoy y déjanos ofrecerte claridad y soporte en tu solicitud de visa.
                   </text>
                 </p>
-                <div class="cta-buttons" style="margin-bottom: var(--spacing-3xl);">
-                  <a href="https://wa.me/18099060849" target="_blank" rel="noopener">
-                    <div class="btn-accent btn btn-xl">
-                      <span><text data-i18n="text_aMxNjq">Reserva tu Llamada Ahora</text></span>
-                    </div>
-                  </a>
-                  <a href="https://wa.me/18099060849" target="_blank" rel="noopener">
-                    <div class="btn btn-outline btn-xl">
-                      <span><text data-i18n="text_L0Jglx">Mensaje en WhatsApp</text></span>
-                    </div>
-                  </a>
-                </div>
-                <!-- Contact Form -->
+                <!-- Contact Form via Formspree -->
                 <div style="background: rgba(255,255,255,0.08); border-radius: var(--border-radius-lg); padding: var(--spacing-2xl); max-width: 600px; margin: 0 auto; text-align: left;">
                   <h3 style="color: var(--color-on-primary); font-family: var(--font-family-heading); font-size: var(--font-size-xl); margin-bottom: var(--spacing-xl);">
                     <text data-i18n="contact_form_title">Envíanos un Mensaje</text>
                   </h3>
-                  <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                  <form id="contact-form" action="https://formspree.io/f/mzdaynlb" method="POST" style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);">
                       <div>
                         <label style="display:block; color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); margin-bottom: 6px;">
-                          <text data-i18n="contact_name">Nombre</text>
+                          <text data-i18n="contact_name">Nombre</text> *
                         </label>
-                        <input type="text" placeholder="Tu nombre" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
+                        <input type="text" name="nombre" required placeholder="Tu nombre" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
                       </div>
                       <div>
                         <label style="display:block; color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); margin-bottom: 6px;">
                           <text data-i18n="contact_phone">Teléfono</text>
                         </label>
-                        <input type="tel" placeholder="+1 (809) 000-0000" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
+                        <input type="tel" name="telefono" placeholder="+1 (809) 000-0000" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
                       </div>
                     </div>
                     <div>
                       <label style="display:block; color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); margin-bottom: 6px;">
-                        <text data-i18n="contact_email">Correo Electrónico</text>
+                        <text data-i18n="contact_email">Correo Electrónico</text> *
                       </label>
-                      <input type="email" placeholder="tucorreo@email.com" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
+                      <input type="email" name="email" required placeholder="tucorreo@email.com" style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none;" />
                     </div>
                     <div>
                       <label style="display:block; color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); margin-bottom: 6px;">
-                        <text data-i18n="contact_service">Servicio de Interés</text>
+                        <text data-i18n="contact_service">Servicio de Interés</text> *
                       </label>
-                      <select style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(11,59,102,0.9); color: white; font-size: var(--font-size-base); outline: none;">
-                        <option value=""><text data-i18n="contact_select">Selecciona un servicio</text></option>
-                        <option value="us-visa">Visa de EE. UU. (B1/B2)</option>
-                        <option value="student-visa">Visa de Estudiante</option>
-                        <option value="work-visa">Visa de Trabajo</option>
-                        <option value="schengen">Visa Schengen</option>
-                        <option value="canada">Visa Canadá</option>
-                        <option value="other">Otro Destino Internacional</option>
+                      <select name="servicio" required style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(11,59,102,0.9); color: white; font-size: var(--font-size-base); outline: none;">
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Visa de EE. UU. (B1/B2)">Visa de EE. UU. (B1/B2)</option>
+                        <option value="Visa de Estudiante">Visa de Estudiante</option>
+                        <option value="Visa de Trabajo">Visa de Trabajo</option>
+                        <option value="Visa Schengen">Visa Schengen</option>
+                        <option value="Visa Canadá">Visa Canadá</option>
+                        <option value="Otro Destino Internacional">Otro Destino Internacional</option>
                       </select>
                     </div>
                     <div>
                       <label style="display:block; color: rgba(255,255,255,0.8); font-size: var(--font-size-sm); margin-bottom: 6px;">
-                        <text data-i18n="contact_message">Mensaje</text>
+                        <text data-i18n="contact_message">Mensaje</text> *
                       </label>
-                      <textarea rows="4" placeholder="Cuéntanos sobre tu caso..." style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none; resize: vertical;"></textarea>
+                      <textarea name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu caso..." style="width:100%; padding: 12px 16px; border-radius: var(--border-radius-md); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; font-size: var(--font-size-base); outline: none; resize: vertical;"></textarea>
                     </div>
-                    <button type="button" onclick="submitContactForm(this)" style="padding: 14px 32px; background: var(--color-accent); color: white; border: none; border-radius: var(--border-radius-control); font-size: var(--font-size-base); font-weight: 600; cursor: pointer; transition: background 0.2s; align-self: flex-start;">
-                      <text data-i18n="contact_submit">Enviar Mensaje</text>
-                    </button>
-                  </div>
+                    <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+                      <button type="submit" style="padding: 14px 32px; background: var(--color-accent); color: white; border: none; border-radius: var(--border-radius-control); font-size: var(--font-size-base); font-weight: 600; cursor: pointer; transition: background 0.2s;">
+                        <text data-i18n="text_aMxNjq">Reserva tu Llamada Ahora</text>
+                      </button>
+                      <a href="https://wa.me/18099060849?text=%C2%A1Hola!%20Me%20contacto%20desde%20el%20sitio%20web%20de%20BVSbyMarilyn.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">
+                        <div class="btn btn-outline btn-xl" style="white-space:nowrap;">
+                          <span><text data-i18n="text_L0Jglx">Mensaje en WhatsApp</text></span>
+                        </div>
+                      </a>
+                    </div>
+                    <div id="form-success" style="display:none; color:#4ade80; font-weight:600; margin-top:0.5rem;">
+                      ✓ Mensaje enviado. Te contactaremos pronto.
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -1242,21 +1240,33 @@
     </a>
 
     <script>
-      function submitContactForm(btn) {
-        var form = btn.closest('div[style]');
-        var inputs = form.querySelectorAll('input, textarea, select');
-        var name = inputs[0].value.trim();
-        var phone = inputs[1].value.trim();
-        var email = inputs[2].value.trim();
-        var service = inputs[3].value;
-        var message = inputs[4].value.trim();
-        if (!name || !email) {
-          alert('Por favor completa al menos tu nombre y correo electrónico.');
-          return;
-        }
-        var text = '¡Hola! Me contacto desde el sitio web de BVSbyMarilyn.%0A%0ANombre: ' + encodeURIComponent(name) + '%0ATeléfono: ' + encodeURIComponent(phone) + '%0ACorreo: ' +
-          encodeURIComponent(email) + '%0AServicio: ' + encodeURIComponent(service) + '%0AMensaje: ' + encodeURIComponent(message);
-        window.open('https://wa.me/18099060849?text=' + text, '_blank');
+      var form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          btn.textContent = 'Enviando...';
+          fetch('https://formspree.io/f/mzdaynlb', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          }).then(function(res) {
+            if (res.ok) {
+              form.reset();
+              document.getElementById('form-success').style.display = 'block';
+              btn.textContent = '✓ Enviado';
+            } else {
+              btn.disabled = false;
+              btn.textContent = 'Reserva tu Llamada Ahora';
+              alert('Hubo un error. Por favor intenta de nuevo.');
+            }
+          }).catch(function() {
+            btn.disabled = false;
+            btn.textContent = 'Reserva tu Llamada Ahora';
+            alert('Hubo un error. Por favor intenta de nuevo.');
+          });
+        });
       }
     </script>
   </body>
